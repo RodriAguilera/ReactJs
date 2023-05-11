@@ -2,7 +2,17 @@ h2 {
   color: rgb(156, 92, 216);
 }
 
+h3 {
+  color: deeppink;
+  font-size: 1.2em;
+}
+
+h4 {
+  color: rgb(187, 79, 182);
+  font-size: 1.1em;
+}
+
 p {
-  color: rgb(35, 170, 125);
+  color: rgb(123, 35, 170);
   font-size: 1.2em;
 }/*# sourceMappingURL=ItemListContainer.css.map */
