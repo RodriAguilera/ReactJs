@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-export const CartWidget = () => {
-  const [cartCount, setCartCount] = useState(0);
+import { MdOutlineAddShoppingCart } from 'react-icons/Md'
+import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../Context/CartContext'
+import "./CartWidget.scss"
 
-  const handleAddToCart = () => {
-    setCartCount(cartCount + 1); 
-  };
+const CartWidget = () => {
+    const { totalCantidad } = useContext(CartContext)
 
-  return (
-    <div>
-      <span className="cart-count numero">{cartCount}</span>
-      
-      <AddShoppingCartIcon color="secondary" aria-label="add to shopping cart" onClick={handleAddToCart}/>
-    </div>
-  );
-};
-
+    return (
+       
+        <Link to="/cart" id='cart'>
+            <MdOutlineAddShoppingCart />
+            <span className='p-1 numero'>{totalCantidad()}</span>
+        </Link>
+    )
+}
+export default CartWidget

@@ -1,0 +1,17 @@
+#cart {
+  font-size: 1.2em;
+  color: antiquewhite;
+  cursor: pointer;
+}
+#cart:hover {
+  color: rgb(205, 43, 226);
+  transition: 0.7s;
+}
+
+.numero {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.1em;
+  color: antiquewhite;
+  font-family: "Marcellus", serif;
+}/*# sourceMappingURL=CartWidget.css.map */
