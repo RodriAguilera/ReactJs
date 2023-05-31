@@ -1,5 +1,6 @@
 .botonera{
-    background-color: rgb(244, 159, 201);       
+    background-color: rgb(244, 159, 201);  
+    margin: 0px 0px 0px 0px;     
         
 ul{display: flex;
   justify-content:space-evenly;
@@ -7,21 +8,58 @@ ul{display: flex;
   list-style: none;
   
 }
-    .links{
-      list-style: none;
-        font-size: 1.3em;
-        color: antiquewhite;
-        margin-left: 30px;
-        margin-right: 30px;
-        
-        &:hover{
-            color: rgb(205, 43, 226);
-            transition: 0.7s;
-        }
+
     }
-  }
+  
 
   .numero{
     font-size: 1.3em;
     color:rgb(159, 44, 201) ;
+  }
+
+  #NavDropdown{
+    list-style: none;
+    font-size: 1.3em;
+    color: antiquewhite;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Marcellus', serif;
+  
+    
+    &:hover{
+        color: rgb(205, 43, 226);
+        transition: 0.7s;
+    }
+  }
+
+  .linksDrop{
+    list-style: none;
+        font-size: 1.1em;
+        color: rgb(255, 97, 218);
+        margin-left: 30px;
+        margin-right: 30px;
+        font-family: 'Marcellus', serif;
+      
+        
+        &:hover{
+            color: rgb(226, 3, 255);
+            transition: 0.7s;
+        }
+
+
+  }
+
+  .links{
+    list-style: none;
+      font-size: 1.3em;
+      color: antiquewhite;
+      margin-left: 30px;
+      margin-right: 30px;
+      font-family: 'Marcellus', serif;
+    
+      
+      &:hover{
+          color: rgb(205, 43, 226);
+          transition: 0.7s;
+      }
   }

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import "./ItemListContainer.css"
-import { pedirDatos } from "../../../helpers/pedirDatos"
+import {pedirDatos} from "../../../helpers/pedirDatos"
 import ItemList from "../itemList/itemList"
 import { useParams } from 'react-router-dom'
 
@@ -33,10 +33,11 @@ export const ItemListContainer = () => {
     }, [categoryId])
 
     return (
-    <div className="container my-5">
+    <div className="text-center m-2">
     {    loading
          ? <h2>Cargando...</h2>
         : <ItemList items={ productos }/>
     }
-
 </div>
+)
+}

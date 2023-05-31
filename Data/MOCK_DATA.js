@@ -18,7 +18,8 @@ const MOCK_DATA = [
         precio: 1500,
         img: sombras,
         description: "Paleta de sombras de colores cálidos",
-        category: 'Maquillaje'
+        category: 'Maquillaje',
+        stock: 5
       
         
     },
@@ -29,7 +30,8 @@ const MOCK_DATA = [
         precio: 2000,
         img: labiales,
         description: "Labiales larga duración",
-        category: "Maquillaje"
+        category: "Maquillaje",
+        stock: 3,
     },
     
     {
@@ -38,7 +40,8 @@ const MOCK_DATA = [
         precio: 1500,
         img: delineadores,
         description: "Delineadores de colores",
-        category: "Maquillaje"
+        category: "Maquillaje",
+        stock:7,
     },
 
     {
@@ -47,7 +50,8 @@ const MOCK_DATA = [
         precio: 1700,
         img: pesta,
         description: "Pestañas pelo por pelo",
-        category: "Pestañas"
+        category: "Pestañas",
+        stock: 8,
     },
 
     {
@@ -56,7 +60,8 @@ const MOCK_DATA = [
         precio: 1000,
         img: tijera,
         description: "Tijera de pestañas",
-        category: "Pestañas"
+        category: "Pestañas",
+        stock: 10,
     },
 
     {
@@ -65,7 +70,8 @@ const MOCK_DATA = [
         precio: 1500,
         img: tinte,
         description: "Tinte para pestañas",
-        category: "Pestañas"
+        category: "Pestañas",
+        stock: 12,
     },
 
     {
@@ -74,7 +80,8 @@ const MOCK_DATA = [
         precio: 700,
         img: apliques,
         description: "Apliques para uñas",
-        category: "Uñas"
+        category: "Uñas",
+        stock: 30,
     },
 
     {
@@ -83,7 +90,8 @@ const MOCK_DATA = [
         precio: 1000,
         img: pinturas,
         description: "Pinturas de uñas",
-        category: "Uñas"
+        category: "Uñas",
+        stock: 20,
     },
 
     {
@@ -92,7 +100,9 @@ const MOCK_DATA = [
         precio: 2500,
         img: carteraRoja,
         description: "Mini cartera roja porta celular",
-        category: "Accesorios"
+        category: "Accesorios",
+        stock: 4,
+    
     },
 
     {
@@ -101,7 +111,8 @@ const MOCK_DATA = [
         precio: 2500,
         img: carteraGris,
         description: "Mini cartera gris porta celular",
-        category: "Accesorios"
+        category: "Accesorios",
+        stock: 4,
     },
 ]
 

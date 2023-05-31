@@ -1,12 +1,11 @@
 import ItemCard from "../ItemCard/ItemCard"
 
 
-
 const ItemList = ( {items} ) => {
 
     return (
         <div>
-            <h2 className="text-center">Productos</h2>
+            <h1 className="text-center">Productos</h1>
             <hr/>
 
             <div className="row">
