@@ -7,8 +7,9 @@ import { Height } from "@mui/icons-material";
 const ItemCard = ({item}) => {
 
         return (
-         
+          
             <Card className="m-4 p-2" style={{ width: '18rem' }}>
+              <Link to={`/detail/${item.id}`} style={{textDecoration: 'none'}} >
               <Card.Img variant="top" src={item.img}  style={{ width: '270px' }}/>
               <Card.Body>
                 <Card.Title> <h1> {item.nombre} </h1></Card.Title>
@@ -17,10 +18,12 @@ const ItemCard = ({item}) => {
                 <p><strong>Precio: ${item.precio}</strong></p>
                 <p>Stock: {item.stock}</p>
                 </Card.Text>
-                <Link to={`/detail/${item.id}`} className='btn btn-outline-primary'>Ver más</Link>
+               
               </Card.Body>
+              
+               </Link>
             </Card>
-          
+         
           );
         
 

@@ -4,6 +4,8 @@ import { FaTrashAlt } from 'react-icons/fa'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from '@mui/material/Button';
+
 
 
 
@@ -25,23 +27,27 @@ const Cart = () => {
         <Col  className="text-center justify-content-md-center my-5" ><h1>{item.nombre}</h1>
                         
                         <h2>Cantidad: {item.cantidad}</h2>
-                        <p>Subotal: {item.cantidad * item.precio}</p>
-                        <button onClick={() => removeItem(item.id)} className="btn btn-outline-danger"><FaTrashAlt/></button></Col>
-        <Col  className="text-center justify-content-md-center my-5" >
-          <div>
-                <h3>TOTAL: ${totalCompra()}</h3>
-                <hr/>
-                <button onClick={emptyCart} className="btn btn-outline-danger">Vaciar carrito</button>
-            </div>
-        </Col>
+                        <p>Subotal: ${item.cantidad * item.precio}</p>
+                        <Button variant="outlined" color="error" onClick={() => removeItem(item.id)} size="large"><FaTrashAlt/></Button></Col>
+                        <hr/>
+                        
       </Row>
 
                     </div>
                 ))
             }
 
+            
+        <div>
+<h3>TOTAL: ${totalCompra()}</h3>
+<hr/>
+<button onClick={emptyCart} className="btn btn-outline-danger">Vaciar carrito</button>
+</div>
+
            
         </div>
+
+
     )
 }
 
