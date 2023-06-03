@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "../itemListContainer/ItemListContainer.css"
+import "../MainScss/MainScss.css"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Height } from "@mui/icons-material";

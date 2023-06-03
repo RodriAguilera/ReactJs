@@ -6,6 +6,7 @@ const ItemList = ( {items} ) => {
     return (
         <div>
             <h1 className="text-center">Productos</h1>
+           
             <hr/>
 
             <div className="row">

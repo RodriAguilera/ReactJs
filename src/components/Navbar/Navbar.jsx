@@ -9,7 +9,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Botonera() {
   return (
-    <Navbar className='botonera' expand="lg">
+    <Navbar className='botonera' expand="lg" sticky="top">
+      
+      
      
         <Navbar.Brand> <Link to="/"><img src={logo} alt="logo MJ rosado" width="100px"/></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

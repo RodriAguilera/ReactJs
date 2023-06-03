@@ -1,41 +1,47 @@
-import { useState } from "react"
-import { useEffect } from "react"
-import "./ItemListContainer.css"
-import {pedirDatos} from "../../../helpers/pedirDatos"
-import ItemList from "../itemList/itemList"
+import { useEffect } from 'react'
+import "../MainScss/MainScss.css"
+import { useState } from 'react'
+import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-
-
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../../Firebase/config'
 
 export const ItemListContainer = () => {
-
-    const [productos, setProductos] = useState([])
+    const [Productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
     const { categoryId } = useParams()
-    console.log(categoryId)
 
     useEffect(() => {
         setLoading(true)
 
-        pedirDatos()
-            .then((data) => {
-                if (!categoryId) {
-                    setProductos(data)
-                } else {
-                    setProductos( data.filter((el) => el.category === categoryId) )
-                }
+        // 1.- Armar una referencia (sync)
+        const productosRef = collection(db, "Productos")
+        const q = categoryId
+                    ? query(productosRef, where("categoria", "==", categoryId))
+                    : productosRef
+        // 2.- Consumir esa referencia (async)
+        getDocs(q)
+            .then((res) => {
+                const docs = res.docs.map((doc) => {
+                    return {
+                        ...doc.data(),
+                        id: doc.id
+                    }
+                })
+                setProductos(docs)
             })
-            .catch((err) => console.log(err))
+            .catch(e => console.log(e))
             .finally(() => setLoading(false))
+
     }, [categoryId])
 
     return (
-    <div className="text-center m-2">
-    {    loading
-         ? <h2>Cargando...</h2>
-        : <ItemList items={ productos }/>
-    }
-</div>
-)
-}
+        <div className='body'>
+        
+            {loading 
+                ? <h2>Cargando..</h2>
+                : <ItemList items={Productos}/>
+            }
+       </div>
+    )}

@@ -37,7 +37,7 @@ const ItemDetail = ({item}) => {
             <p>{item.descripcion}</p>
             <h2>Categoria {item.category}</h2>
             <p><strong>Precio: ${item.precio}</strong></p>
-            <p>Subtotal: ${item.precio * cantidad}</p></Col>
+            <p> Subtotal: ${item.precio * cantidad}</p></Col>
         <Col xs={{ order: 'last' }}  className="text-center justify-content-md-center my-5" > {
                 isInCart(item.id)
                     ? <Link className="btn btn-outline-success" to="/cart">Terminar mi compra</Link>

@@ -3,6 +3,11 @@
   font-family: "Karma", serif;
 }
 
+.body {
+  background: rgba(244, 159, 202, 0.649);
+  background: linear-gradient(187deg, rgba(244, 159, 202, 0.649) 0%, rgb(246, 255, 158) 100%);
+}
+
 h1 {
   color: deeppink;
   font-size: 1.7em;
@@ -28,4 +33,9 @@ h4 {
 p {
   color: rgb(123, 35, 170);
   font-size: 1.2em;
-}/*# sourceMappingURL=ItemListContainer.css.map */
+}
+
+.body2 {
+  background: rgba(244, 159, 202, 0.649);
+  padding-bottom: 20px;
+}/*# sourceMappingURL=MainScss.css.map */

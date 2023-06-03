@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from '@mui/material/Button';
+import "../MainScss/MainScss.css"
 
 
 
@@ -13,7 +14,7 @@ const Cart = () => {
     const { cart, emptyCart, totalCompra, removeItem } = useContext(CartContext)
 
     return (
-        <div className="my-5 text-center">
+        <div className="body2 text-center">
             <h1>Tu compra</h1>
             <hr/>
             
@@ -39,7 +40,7 @@ const Cart = () => {
 
             
         <div>
-<h3>TOTAL: ${totalCompra()}</h3>
+<h3> <strong> TOTAL: ${totalCompra()}</strong></h3>
 <hr/>
 <button onClick={emptyCart} className="btn btn-outline-danger">Vaciar carrito</button>
 </div>

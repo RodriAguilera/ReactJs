@@ -10,6 +10,8 @@ import Contacto from './components/Contacto/Contacto';
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import { CartProvider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
+import Datos from './components/Contacto/Contacto';
+import Inicio from "./components/Inicio/Inicio"
 
 
 function App() {
@@ -28,8 +30,8 @@ function App() {
    <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }/>
    <Route path='*' element = { <Navigate to={"/inicio"}/> }/>
    <Route path='/promociones' element = { <Promos/> }/>
-   <Route path='/contacto' element = { <Contacto/> }/>
-   <Route path='/inicio' />
+   <Route path='/contacto' element = { <Datos/> }/>
+   <Route path='/inicio' element = {<Inicio/>}/>
    <Route path='/cart' element={ <Cart/> }/>
    
    </Routes>
