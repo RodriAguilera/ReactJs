@@ -12,6 +12,7 @@ import { CartProvider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
 import Datos from './components/Contacto/Contacto';
 import Inicio from "./components/Inicio/Inicio"
+import Checkout from "./components/Checkout/Checkout";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
    <Route path='/contacto' element = { <Datos/> }/>
    <Route path='/inicio' element = {<Inicio/>}/>
    <Route path='/cart' element={ <Cart/> }/>
+   <Route path='/checkout' element={ <Checkout/> }/>
    
    </Routes>
 

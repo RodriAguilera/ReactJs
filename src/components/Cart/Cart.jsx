@@ -1,23 +1,29 @@
+
 import { useContext } from "react"
-import { CartContext } from "../Context/CartContext"
+ import { CartContext } from "../Context/CartContext"
 import { FaTrashAlt } from 'react-icons/fa'
-import Container from 'react-bootstrap/Container';
+import { Link } from "react-router-dom"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from '@mui/material/Button';
 import "../MainScss/MainScss.css"
 
-
-
-
 const Cart = () => {
     const { cart, emptyCart, totalCompra, removeItem } = useContext(CartContext)
-
+    if (cart.length === 0) {
+        return (
+            <div className="body2 text-center">
+                <h1>Tu carrito está vacío</h1>
+                <hr/>
+                <p>Volver a inicio</p>
+                <Link to="/" className="btn btn-outline-primary">Ver productos</Link>
+            </div>
+        )
+    }
     return (
         <div className="body2 text-center">
             <h1>Tu compra</h1>
             <hr/>
-            
             {
                 cart.map((item) => (
         <div key={item.id}>
@@ -42,7 +48,8 @@ const Cart = () => {
         <div>
 <h3> <strong> TOTAL: ${totalCompra()}</strong></h3>
 <hr/>
-<button onClick={emptyCart} className="btn btn-outline-danger">Vaciar carrito</button>
+<button onClick={emptyCart} className="btn btn-outline-danger mx-2">Vaciar carrito</button>
+<Link to="/checkout" className="btn btn-outline-success">Terminar mi compra</Link>
 </div>
 
            
