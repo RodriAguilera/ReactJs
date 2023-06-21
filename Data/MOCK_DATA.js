@@ -31,7 +31,7 @@ const MOCK_DATA = [
         img: labiales,
         description: "Labiales larga duración",
         category: "Maquillaje",
-        stock: 3,
+        stock: 15,
     },
     
     {
@@ -101,7 +101,7 @@ const MOCK_DATA = [
         img: carteraRoja,
         description: "Mini cartera roja porta celular",
         category: "Accesorios",
-        stock: 4,
+        stock: 16,
     
     },
 

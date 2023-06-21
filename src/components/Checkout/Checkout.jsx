@@ -152,15 +152,15 @@ const Checkout = () => {
 
 
 
-        // addDoc(ordersRef, orden)
+        addDoc(ordersRef, orden)
 
-        //     .then((doc) => {
+            .then((doc) => {
 
-        //         setOrderId(doc.id)
+                setOrderId(doc.id)
 
-        //         emptyCart()
+                emptyCart()
 
-        //     })
+            })
 
     }
 
@@ -171,7 +171,7 @@ const Checkout = () => {
 
         return (
 
-            <div className="body2">
+            <div className="body2 p-3">
 
                 <h2>Tu compra se registró exitosamente!</h2>
 
@@ -182,7 +182,7 @@ const Checkout = () => {
 
 
 
-                <Link to="/">Volver</Link>
+                <Link to="/" className="btn btn-outline-success">Volver</Link>
 
             </div>
 
